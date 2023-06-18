@@ -17,3 +17,15 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.content-container {
+  height: 50%;
+  width: 80%;
+  background-color: rgba(124, 124, 124, 0.25);
+  border-radius: 5px;
+}
+
+.content-title {
+  color: white;
+  font-size: 2.5rem;
+}
