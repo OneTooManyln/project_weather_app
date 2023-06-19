@@ -36,6 +36,10 @@ body {
 }
 
 .search-bar {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  justify-content: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 }
 
@@ -44,12 +48,16 @@ body {
   border: none;
   outline: none;
   color: white;
-  padding: 5px;
+  padding: 0;
+}
+
+.material-symbols-outlined {
+  color: white;
 }
 
 .content-title {
   padding: 20px;
-  margin-top: 60px;
+  margin-top: 40px;
   color: rgba(255, 255, 255, 0.8);
   font-size: 3rem;
 }
