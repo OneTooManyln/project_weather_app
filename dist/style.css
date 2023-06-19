@@ -35,6 +35,18 @@ body {
   padding: 0px 20px;
 }
 
+.search-bar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+#search {
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 5px;
+}
+
 .content-title {
   padding: 20px;
   margin-top: 60px;
