@@ -57,6 +57,8 @@ body {
 }
 
 .dashboard-main-content-container {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
   flex: 1;
   color: rgba(255, 255, 255, 0.9);
   padding: 20px;
