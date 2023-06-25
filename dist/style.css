@@ -72,3 +72,20 @@ body {
 .temperature {
   font-size: 7rem;
 }
+
+.world-weather-info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  font-size: 1rem;
+}
+
+.cities {
+  width: 100%;
+}
+
+.world-temperature {
+  font-size: 2rem;
+  padding-bottom: 20px;
+}
