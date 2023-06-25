@@ -78,6 +78,7 @@ body {
   flex: 1;
   color: rgba(255, 255, 255, 0.9);
   padding: 20px;
+  margin-left: 20px;
   margin-top: 40px;
 }
 
@@ -88,6 +89,11 @@ body {
 
 .temperature {
   font-size: 7rem;
+}
+
+.date {
+  padding-top: 40px;
+  font-weight: bold;
 }
 
 .world-weather-info {
