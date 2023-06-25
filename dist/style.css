@@ -41,7 +41,7 @@ body {
   padding-top: 20px;
   padding-bottom: 5px;
   justify-content: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 #search {
@@ -56,9 +56,9 @@ body {
   color: white;
 }
 
-.location {
+.dashboard-main-content-container {
+  flex: 1;
+  color: rgba(255, 255, 255, 0.9);
   padding: 20px;
   margin-top: 40px;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 3rem;
 }
