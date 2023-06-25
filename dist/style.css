@@ -66,10 +66,12 @@ body {
   font-size: 1.5rem;
 }
 
-.wind {
+.additional-weather-info > * {
   display: flex;
+  justify-content: space-between;
   gap: 60px;
   align-items: center;
+  padding-bottom: 20px;
 }
 
 .dashboard-main-content-container {
