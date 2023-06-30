@@ -1,3 +1,3 @@
 import { getWeatherData } from "./apiFunctions";
 
-getWeatherData();
+getWeatherData("London");
