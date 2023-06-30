@@ -1,1 +1,1 @@
-(()=>{"use strict";(async()=>{fetch("https://api.weatherapi.com/v1/current.json?key=47ac169af086415e85a163023231706&q=london",{mode:"cors"}).then((e=>{console.log(e.json())}))})()})();
+(()=>{"use strict";(async()=>{const a=await fetch("https://api.weatherapi.com/v1/current.json?key=47ac169af086415e85a163023231706&q=london",{mode:"cors"}),o=await a.json();console.log(o.current)})()})();
