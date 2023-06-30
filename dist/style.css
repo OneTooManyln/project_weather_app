@@ -68,12 +68,24 @@ input[type="search"]::-webkit-search-results-decoration {
   padding: 0;
 }
 
+.search-icon {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  outline: none;
+}
+
 .search-icon:hover {
   cursor: pointer;
 }
 
 .material-symbols-outlined {
   color: white;
+}
+
+form {
+  display: flex;
 }
 
 .additional-weather-info {
