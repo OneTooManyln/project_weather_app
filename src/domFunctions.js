@@ -1,3 +1,5 @@
+import { format } from "date-fns";
+
 export const renderWeatherData = (data) => {
   const city = data.location.name;
   const { country } = data.location;
@@ -35,7 +37,7 @@ export const renderLocation = (location, country) => {
   locationElement.innerText = `${location}, ${country}`;
 };
 
-export const renderWeatherInfo = (temp, cond, time) => {
+export const renderWeatherInfo = (temp, cond, date) => {
   const temperatureElement = document.querySelector(".temperature");
   const conditionElement = document.querySelector(".condition");
   const dateElement = document.querySelector(".date");
@@ -46,7 +48,7 @@ export const renderWeatherInfo = (temp, cond, time) => {
 
   temperatureElement.innerText = `${temp}°`;
   conditionElement.innerText = `${cond}`;
-  dateElement.innerText = "time";
+  dateElement.innerText = format(new Date(date), "EEEE, MMMM d, y");
 };
 
 export const renderAdditionalWeatherInfo = (
