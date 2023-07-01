@@ -3,7 +3,7 @@ import { getWeatherData } from "./apiFunctions";
 const form = document.querySelector("form");
 const searchInputValue = document.querySelector("#search");
 
-getWeatherData("London");
+getWeatherData("Seoul");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
