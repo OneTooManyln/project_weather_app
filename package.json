@@ -38,7 +38,7 @@
     "colorette": "^2.0.20",
     "commander": "^2.20.3",
     "cross-spawn": "^7.0.3",
-    "data-fns": "^1.1.0",
+    "date-fns": "^2.30.0",
     "electron-to-chromium": "^1.4.433",
     "enhanced-resolve": "^5.15.0",
     "envinfo": "^7.8.1",
