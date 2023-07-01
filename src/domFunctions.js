@@ -18,4 +18,12 @@ export const renderWeatherData = (data) => {
   console.log(cloudCoverage);
   console.log(condition);
   console.log(localTime);
+
+  renderLocation(city, country);
+};
+
+export const renderLocation = (location, country) => {
+  const locationElement = document.querySelector(".location");
+  locationElement.innerText = "";
+  locationElement.innerText = `${location}, ${country}`;
 };
