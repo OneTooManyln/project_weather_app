@@ -6,7 +6,7 @@ export const renderWeatherData = (data) => {
   const windDirection = data.current.wind_dir;
   const { humidity } = data.current;
   const cloudCoverage = data.current.cloud;
-  const { condition } = data.current;
+  const condition = data.current.condition.text;
   const localTime = data.location.localtime;
 
   console.log(city);
@@ -20,10 +20,25 @@ export const renderWeatherData = (data) => {
   console.log(localTime);
 
   renderLocation(city, country);
+  renderWeatherInfo(temperature, condition, localTime);
 };
 
 export const renderLocation = (location, country) => {
   const locationElement = document.querySelector(".location");
   locationElement.innerText = "";
   locationElement.innerText = `${location}, ${country}`;
+};
+
+export const renderWeatherInfo = (temp, cond, time) => {
+  const temperatureElement = document.querySelector(".temperature");
+  const conditionElement = document.querySelector(".condition");
+  const dateElement = document.querySelector(".date");
+
+  temperatureElement.innerText = "";
+  conditionElement.innerText = "";
+  dateElement.innerText = "";
+
+  temperatureElement.innerText = `${temp}°`;
+  conditionElement.innerText = `${cond}`;
+  dateElement.innerText = "time";
 };
