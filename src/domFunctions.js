@@ -21,6 +21,12 @@ export const renderWeatherData = (data) => {
 
   renderLocation(city, country);
   renderWeatherInfo(temperature, condition, localTime);
+  renderAdditionalWeatherInfo(
+    windDirection,
+    windSpeed,
+    humidity,
+    cloudCoverage
+  );
 };
 
 export const renderLocation = (location, country) => {
@@ -41,4 +47,23 @@ export const renderWeatherInfo = (temp, cond, time) => {
   temperatureElement.innerText = `${temp}°`;
   conditionElement.innerText = `${cond}`;
   dateElement.innerText = "time";
+};
+
+export const renderAdditionalWeatherInfo = (
+  windDir,
+  windSpeed,
+  humidity,
+  cloud
+) => {
+  const windElement = document.querySelector(".wind strong");
+  const humidityElement = document.querySelector(".humidity strong");
+  const cloudElement = document.querySelector(".clouds strong");
+
+  windElement.innerText = "";
+  humidityElement.innerText = "";
+  cloudElement.innerText = "";
+
+  windElement.innerText = `${windDir} ${windSpeed}km/h`;
+  humidityElement.innerText = `${humidity}%`;
+  cloudElement.innerText = `${cloud}%`;
 };
