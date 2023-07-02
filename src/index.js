@@ -12,4 +12,5 @@ renderWorldWeatherInfo();
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   renderWeatherData(await getWeatherData(searchInputValue.value));
+  searchInputValue.value = "";
 });
