@@ -8,7 +8,7 @@ const searchInputValue = document.querySelector("#search");
 // call function with return value from getWeatherData
 renderWeatherData(await getWeatherData("seoul"));
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  getWeatherData(searchInputValue.value);
+  renderWeatherData(await getWeatherData(searchInputValue.value));
 });
