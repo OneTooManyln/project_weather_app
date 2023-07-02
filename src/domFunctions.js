@@ -105,7 +105,7 @@ export const renderWorldWeatherInfo = async () => {
   await Promise.all(
     cityTemps.map(async (cityTemp) => {
       const weatherData = await getWeatherData(cityTemp.city);
-      cityTemp.element.innerText = weatherData.current.temp_c;
+      cityTemp.element.innerText = `${weatherData.current.temp_c}°`;
     })
   );
 };
