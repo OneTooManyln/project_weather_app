@@ -4,8 +4,8 @@ import { getWeatherData } from "./apiFunctions";
 export const renderWeatherData = (data) => {
   const city = data.location.name;
   const { country } = data.location;
-  const temperature = data.current.temp_c;
-  const windSpeed = data.current.wind_kph;
+  const temperature = Math.round(data.current.temp_c);
+  const windSpeed = Math.round(data.current.wind_kph);
   const windDirection = data.current.wind_dir;
   const { humidity } = data.current;
   const cloudCoverage = data.current.cloud;
@@ -105,7 +105,7 @@ export const renderWorldWeatherInfo = async () => {
   await Promise.all(
     cityTemps.map(async (cityTemp) => {
       const weatherData = await getWeatherData(cityTemp.city);
-      cityTemp.element.innerText = `${weatherData.current.temp_c}°`;
+      cityTemp.element.innerText = `${Math.round(weatherData.current.temp_c)}°`;
     })
   );
 };
