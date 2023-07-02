@@ -1,4 +1,5 @@
 import { format } from "date-fns";
+import { getWeatherData } from "./apiFunctions";
 
 export const renderWeatherData = (data) => {
   const city = data.location.name;
@@ -68,4 +69,43 @@ export const renderAdditionalWeatherInfo = (
   windElement.innerText = `${windDir} ${windSpeed}km/h`;
   humidityElement.innerText = `${humidity}%`;
   cloudElement.innerText = `${cloud}%`;
+};
+
+export const renderWorldWeatherInfo = async () => {
+  const cityTemps = [
+    {
+      city: "los angeles",
+      element: document.querySelector("#city-one :nth-child(1)"),
+    },
+    {
+      city: "new york city",
+      element: document.querySelector("#city-two :nth-child(1)"),
+    },
+    {
+      city: "tokyo",
+      element: document.querySelector("#city-three :nth-child(1)"),
+    },
+    {
+      city: "paris",
+      element: document.querySelector("#city-four :nth-child(1)"),
+    },
+    {
+      city: "hong kong",
+      element: document.querySelector("#city-five :nth-child(1)"),
+    },
+    {
+      city: "bangkok",
+      element: document.querySelector("#city-six :nth-child(1)"),
+    },
+    {
+      city: "chongqing",
+      element: document.querySelector("#city-seven :nth-child(1)"),
+    },
+  ];
+  await Promise.all(
+    cityTemps.map(async (cityTemp) => {
+      const weatherData = await getWeatherData(cityTemp.city);
+      cityTemp.element.innerText = weatherData.current.temp_c;
+    })
+  );
 };
