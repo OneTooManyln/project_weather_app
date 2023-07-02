@@ -1,5 +1,5 @@
 import { getWeatherData } from "./apiFunctions";
-import { renderWeatherData } from "./domFunctions";
+import { renderWeatherData, renderWorldWeatherInfo } from "./domFunctions";
 
 const form = document.querySelector("form");
 const searchInputValue = document.querySelector("#search");
@@ -7,6 +7,7 @@ const searchInputValue = document.querySelector("#search");
 // getWeatherData("Seoul");
 // call function with return value from getWeatherData
 renderWeatherData(await getWeatherData("seoul"));
+renderWorldWeatherInfo();
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
