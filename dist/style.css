@@ -22,7 +22,7 @@ body {
 .dashboard-container {
   display: flex;
   height: 55%;
-  width: 90%;
+  width: 95%;
   background-color: rgba(124, 124, 124, 0.25);
   background-image: url(../img/plato-terentev.jpg);
   background-size: cover;
